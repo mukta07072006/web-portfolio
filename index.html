@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moshud Muktadir | Under Construction Site</title>
+    <style>
+        :root {
+            --blue: #2563eb;
+            --light-blue: #eff6ff;
+            --grid: #f1f5f9;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 60px 20px;
+            /* Precise Blueprint Grid */
+            background-image: 
+                linear-gradient(to right, var(--grid) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .main-container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .welcome-tag {
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 6vw, 2.5rem);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 50px;
+            color: var(--text-main);
+        }
+
+        h1 b {
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        /* Shared Card Style (Status & Form) */
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 2px;
+            padding: 30px;
+            text-align: left;
+            margin-bottom: 30px;
+            /* The specific shadow you requested */
+            box-shadow: 12px 12px 0px var(--light-blue);
+        }
+
+        .card-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .status-dot {
+            height: 6px;
+            width: 6px;
+            background: #f59e0b;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+            box-shadow: 0 0 8px #f59e0b;
+        }
+
+        .loading-bar {
+            height: 2px;
+            width: 100%;
+            background: #f1f5f9;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            position: absolute;
+            height: 100%;
+            width: 40%;
+            background: var(--blue);
+            animation: slide 2.5s infinite ease-in-out;
+        }
+
+        @keyframes slide {
+            0% { left: -40%; }
+            100% { left: 100%; }
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: #fafafa;
+            border: 1px solid #e2e8f0;
+            border-radius: 0;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--blue);
+            background: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: var(--text-main);
+            color: white;
+            border: none;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: var(--blue);
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 9px;
+            color: var(--text-muted);
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <span class="welcome-tag">Welcome to the portfolio website of</span>
+        <h1><b>MOSHUD</b> MUKTADIR</h1>
+
+        <div class="card">
+            <div class="card-label">
+                <span><span class="status-dot"></span>System: Construction</span>
+                <span>v0.2.1</span>
+            </div>
+            <p style="font-size: 16px; color: #475569; font-weight: 400; line-height: 1.6;">
+                The digital experience is currently under <i>architectural refinement</i>. 
+            </p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-label">Direct Inquiry</div>
+            <form action="https://formspree.io/f/your-id" method="POST">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="YOUR EMAIL" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="3" placeholder="YOUR MESSAGE" required></textarea>
+                </div>
+                <button type="submit">Send Signal</button>
+            </form>
+        </div>
+
+        <footer>
+            © 2026 MOSHUD MUKTADIR
+        </footer>
+    </div>
+
+</body>
+</html>
